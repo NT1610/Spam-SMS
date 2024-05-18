@@ -7,8 +7,8 @@ function App() {
   return (
     <BrowserRouter>
       <div className="grid grid-cols-5 min-h-screen">
-        <div className=" w-full border-r border-gray-300 col-span-1">
-          <Nav />
+        <div className=" w-full border-r border-gray-300">
+          <Nav color="blue-gray" />
         </div>
         <div className="col-span-4 p-5">
           <Routes>
