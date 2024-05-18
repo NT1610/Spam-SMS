@@ -1,12 +1,13 @@
 import pandas as pd
 import pickle
 import re
-from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 import py_vncorenlp
 
 def vncore(data):
-    vncore = py_vncorenlp.VnCoreNLP(save_dir="../Data", annotators=["wseg"], max_heap_size='-Xmx500m')
-    data["text"] = data["text"].apply(lambda x: ' '.join(vncore.word_segment(x)))
+    #py_vncorenlp.download_model(save_dir='./Model') #install py_vncorenlp
+    vncore = py_vncorenlp.VnCoreNLP(save_dir="../Model", annotators=["wseg"], max_heap_size='-Xmx500m')
+    data= data.apply(lambda x: ' '.join(vncore.word_segment(x)))
     return data
 
 def transform_text(text, shortwords_dict):
@@ -26,27 +27,29 @@ def transform_text(text, shortwords_dict):
 
 def preprocess(data):
     # Process data
-    data = vncore(data)
     shortwords_dict = pd.read_csv("../Data/vietnamese_shortwords.csv", sep=';', header=None, index_col=0).squeeze().to_dict()
-    data['text'] = data['text'].str.lower().apply(transform_text, args=(shortwords_dict,))
+    data = data.str.lower().apply(transform_text, args=(shortwords_dict,))
+    data = vncore(data)
     return data
 
-if __name__ == "__main__":
-    # Load data
-    data = pd.read_csv("../Data/vietnamese_data.csv").dropna()
-
-    # Preprocess data
+def countVectorrizer(data):
+    #Load precessed_data
     processed_data = preprocess(data)
-
     # Load stopwords
     stopwords = pd.read_csv("../Data/vietnamese_stopwords.csv", header=None).squeeze().tolist()
 
     # Vectorize text
     vectorizer = CountVectorizer(stop_words=stopwords)
-    data_vectorized = vectorizer.fit_transform(processed_data["text"])
+    data_vectorized = vectorizer.fit_transform(processed_data)
+    return processed_data
+    
+def tfidfVectorize(data):
+    #Load precessed_data
+    processed_data = preprocess(data)
+    # Load stopwords
+    stopwords = pd.read_csv("../Data/vietnamese_stopwords.csv", header=None).squeeze().tolist()
 
-    # Save processed data, vectorizer, and preprocessing function
-    with open('../Model/processed_data.pkl', 'wb') as f:
-        pickle.dump((processed_data, data_vectorized, vectorizer), f)
-
-    print("Data, vectorizer, and preprocessing function saved to processed_data.pkl")
+    # Vectorize text
+    vectorizer = TfidfVectorizer(stop_words=stopwords)
+    data_vectorized = vectorizer.fit_transform(processed_data)
+    return processed_data
