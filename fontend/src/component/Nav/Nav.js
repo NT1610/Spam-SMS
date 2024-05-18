@@ -7,16 +7,16 @@ const Nav = () => {
       <ul className="space-y-4">
         <li>
           <Link to="/">
-            <button className="w-full p-2 border border-gray-300 rounded">Spam</button>
+            <button className="w-full p-2 border border-gray-300 rounded bg-white">Spam</button>
           </Link>
         </li>
         <li>
           <Link to="/search">
-            <button className="w-full p-2 border border-gray-300 rounded">Link</button>
+            <button className="w-full p-2 border border-gray-300 rounded bg-white">Link</button>
           </Link>
         </li>
-        <li><button className="w-full p-2 border border-gray-300 rounded">Xử lí Spam</button></li>
-        <li><button className="w-full p-2 border border-gray-300 rounded">Model Spam</button></li>
+        <li><button className="w-full p-2 border border-gray-300 rounded bg-white">Xử lí Spam</button></li>
+        <li><button className="w-full p-2 border border-gray-300 rounded bg-white">Model Spam</button></li>
       </ul>
     </nav>
   );

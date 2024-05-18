@@ -143,11 +143,12 @@ def store_to_db(data):
     # Define query (create table if not exist)
     create_table_query = """
         CREATE TABLE IF NOT EXISTS facebook_comments (
-            user_id VARCHAR(20),
-            user_name VARCHAR(20),
+            user_id VARCHAR(255),
+            user_name VARCHAR(255),
             comment_text TEXT
         );
     """
+
     cursor.execute(create_table_query)
 
     # Insert data to table
@@ -220,15 +221,20 @@ if __name__ == "__main__":
     for o in output:
         print(o)
     print(type(output))
-    df = pd.read_csv('output_1.csv')
+    columns = ['id', 'name', 'comment']
+    df = pd.DataFrame(output, columns=columns)
 
-    new_df = pd.DataFrame(output, columns=df.columns)
-    # Append new records to existing DataFrame
-    df = pd.concat([df, new_df], ignore_index=True)
-    df.to_csv("output_1.csv", index=False)
+    df['id'] = pd.Series(range(df.shape[0]))
+
+
+    df['label'] = [0 for i in range(df.shape[0])]
+
+    df.dropna(subset=['comment'], inplace=True)
+    df.to_csv('output.csv', index=False)
+
     try:
         store_to_db(output)
     except:
         print("Unable to store data")
     # visualize
-    visualize_text(text)
+    # visualize_text(text)

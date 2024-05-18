@@ -3,6 +3,7 @@ import React from 'react';
 const Output = ({ comments }) => {
   return (
     <div className="p-2 border border-gray-300 rounded w-full max-h-96 overflow-y-auto">
+      <h1>Comment</h1>
       {comments.map((comment, index) => (
         <div key={index} className="mb-2 p-2 border-b border-gray-200">
           <p>{comment.text}</p>

@@ -41,13 +41,18 @@ class InputData(BaseModel):
     input_comment: str
     input_option: str
 
+# Define data model for input
+class InputDataFB(BaseModel):
+    link_fb: str
+    input_option: str
+
 
 # Define function to make predictions
 def make_predictions(list_inputs, algorithm):
     # print(list_inputs, algorithm)
     vectorizer_file = "loaded_models/tfidf_vectorizer.pkl"
 
-    if algorithm == "Logistic Regression":
+    if algorithm == "logistic-regression":
         model_file = "loaded_models/tfidf_logistic_regression.pkl"
         return logistic_regression.make_predictions(
             list_inputs=list_inputs,
@@ -69,6 +74,17 @@ def make_predictions(list_inputs, algorithm):
 # Endpoint to handle text predictions
 @app.post("/predict/")
 async def predict(input_data: InputData):
+    list_inputs = input_data.input_comment.split("\n")
+
+    predictions = make_predictions(list_inputs, input_data.input_option)
+    # predictions = [print(i) for i in predictions]
+
+    predictions = [str(i) for i in predictions]
+    print(predictions)
+    return predictions
+
+@app.post("/crawl/")
+async def predict_crawl(input_data: InputDataFB):
     list_inputs = input_data.input_comment.split("\n")
 
     predictions = make_predictions(list_inputs, input_data.input_option)
