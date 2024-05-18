@@ -15,7 +15,7 @@ PATH2 = os.getenv("OUTPUT_PATH2")
 
 # Initialize FastAPI app
 app = FastAPI(
-    title="API Cybergame",
+    title="Spam SMS",
     version="1.0.0",
     openapi_url="/openapi.json",
 )
@@ -78,18 +78,6 @@ async def predict(input_data: InputData):
     print(predictions)
     return predictions
 
-
-# Endpoint to handle file uploads
-@app.post("/uploadfile/")
-async def upload_file(file: UploadFile = File(...)):
-    file_location = f"files/{file.filename}"
-    with open(file_location, "wb+") as file_object:
-        file_object.write(file.file.read())
-    return {"info": f"file '{file.filename}' saved at '{file_location}'"}
-
-
-# Serve static files (if needed)
-app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # Main entry point
 if __name__ == "__main__":
