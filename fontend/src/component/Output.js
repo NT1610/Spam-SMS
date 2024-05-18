@@ -1,12 +1,18 @@
 import React from 'react';
 
-const Predictions = ({ comment, predictionResult }) => {
+const Output = ({ comments }) => {
   return (
-    <div className="p-2 border border-gray-300 rounded">
-      <h3>Comment:</h3>
-      <p>{comment} <span className={`text-${predictionResult === 'spam' ? 'red' : 'green'}-500`}>{predictionResult}</span></p>
+    <div className="p-2 border border-gray-300 rounded w-full max-h-96 overflow-y-auto">
+      {comments.map((comment, index) => (
+        <div key={index} className="mb-2 p-2 border-b border-gray-200">
+          <p>{comment.text}</p>
+          <p className={comment.result === 'spam' ? 'text-red-500' : 'text-green-500'}>
+            {comment.result}
+          </p>
+        </div>
+      ))}
     </div>
   );
 };
 
-export default Predictions;
+export default Output;
