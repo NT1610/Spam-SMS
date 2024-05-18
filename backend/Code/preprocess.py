@@ -39,18 +39,18 @@ def preprocess(data):
         data = ' '.join(data)
     return data
 
-def countVectorizer(data):
+def countVectorizer_fit(data):
     #Load precessed_data
-    processed_data = np.array(preprocess(data))
+    processed_data = preprocess(data)
     # Load stopwords
     stopwords = pd.read_csv("../Data/vietnamese_stopwords.csv", header=None).squeeze().tolist()
 
     # Vectorize text
     vectorizer = CountVectorizer(stop_words=stopwords)
     data_vectorized = vectorizer.fit_transform(processed_data)
-    return data_vectorized
+    return vectorizer, data_vectorized
     
-def tfidfVectorizer(data):
+def tfidfVectorizer_fit(data):
     #Load precessed_data
     processed_data = preprocess(data)
     # Load stopwords
@@ -59,4 +59,4 @@ def tfidfVectorizer(data):
     # Vectorize text
     vectorizer = TfidfVectorizer(stop_words=stopwords)
     data_vectorized = vectorizer.fit_transform(processed_data)
-    return data_vectorized
+    return vectorizer, data_vectorized
