@@ -1,78 +1,82 @@
+// src/App.js
 import React, { useState } from 'react';
-import './App.css';
 import TextInput from './component/TextInput';
-import Predictions from './component/Predictions';
+import Predictions from './component/Output';
+import { prediction } from './services/prediction-comment';
 
 function App() {
   const [userText, setUserText] = useState('');
-  const [predictions, setPredictions] = useState('');
-  const [algorithm, setAlgorithm] = useState('svm');
+  const [comment, setComment] = useState('');
+  const [predictionResult, setPredictionResult] = useState('');
+  const [algorithm, setAlgorithm] = useState('SVM'); // Định nghĩa biến algorithm và setAlgorithm
 
   const handleClearText = () => {
     setUserText('');
-  };
-
-  const handleClearPredictions = () => {
-    setPredictions('');
+    setComment('');
+    setPredictionResult('');
   };
 
   const handleAlgorithmChange = (event) => {
     setAlgorithm(event.target.value);
   };
 
-  const handlePredict = () => {
-    if (userText.trim() === '') {
-      alert('Please enter some text to predict');
-      return;
+  const handleCommentSubmit = async () => {
+    console.log("hello")
+    try {
+      const response = await prediction(userText, algorithm);
+      console.log(response.data)
+
+      const result = response.data === '1' ? 'spam' : 'not spam';
+      console.log(result)
+      setComment(userText);
+      setPredictionResult(result);
+    } catch (error) {
+      console.error('Error fetching prediction:', error);
+      setPredictionResult('Error fetching prediction');
     }
-
-    const lines = userText.split('\n');
-    const newPredictions = lines.map((line) => {
-      const isSpam = Math.random() > 0.5;
-      return `${isSpam ? '[1]' : '[0]'} ${line}`;
-    });
-
-    setPredictions(newPredictions.join('\n'));
-  };
-
-  const handleExport = () => {
-    const blob = new Blob([predictions], { type: 'text/plain' });
-    const link = document.createElement('a');
-    link.href = URL.createObjectURL(blob);
-    link.download = 'predictions.txt';
-    link.click();
   };
 
   return (
     <div className="flex flex-col items-center p-5">
       <div className="flex flex-col items-center space-y-2">
-        <label htmlFor="algorithmSelect" className="font-bold">
-          Choose an algorithm
-        </label>
+        <TextInput
+          value={userText}
+          onChange={e => setUserText(e.target.value)}
+        />
+        {/* {console.log(userText)} */}
+
+        <button
+          onClick={handleCommentSubmit}
+          className="p-2 bg-blue-500 text-white rounded"
+        >
+          Comment
+        </button>
+
+
+        <button
+          onClick={handleClearText}
+          className="p-2 bg-gray-500 text-white rounded"
+        >
+          Clear
+        </button>
+      </div>
+      <div className="flex flex-col items-center space-y-2 mt-4">
         <select
           id="algorithmSelect"
           value={algorithm}
           onChange={handleAlgorithmChange}
           className="p-2 border border-black-400 rounded"
         >
-          <option value="svm">SVM</option>
-          <option value="other">Other</option>
+          <option value="SVM">SVM</option>
+          <option value="naive-bayes">Naive-Bayes</option>
+          <option value="logistic-regression">Logistic Regression</option>
         </select>
       </div>
-      <div className="flex space-x-10 mb-5">
-        <TextInput
-          userText={userText}
-          setUserText={setUserText}
-          handlePredict={handlePredict}
-          handleClearText={handleClearText}
-        />
-        <Predictions
-          predictions={predictions}
-          handleClearPredictions={handleClearPredictions}
-          handleExport={handleExport}
-        />
-      </div>
-
+      {comment && (
+        <div className="flex flex-col items-center space-y-2 mt-4">
+          <Predictions comment={comment} predictionResult={predictionResult} />
+        </div>
+      )}
     </div>
   );
 }
