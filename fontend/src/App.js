@@ -19,7 +19,7 @@ function App() {
   const handleCommentSubmit = async () => {
     try {
       const response = await prediction(userText, algorithm);
-      const result = response.data === '1' ? 'spam' : 'not spam';
+      const result = response.data == '1' ? 'spam' : 'not spam';
       const newComment = { text: userText, result };
       setComments([newComment, ...comments]);
       setUserText('');
