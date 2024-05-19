@@ -9,7 +9,7 @@ const prediction = (inputComment, inputOption) => {
 
 const predict_crawl = (inputLink, inputOption) => {
     return axiosInstance.post('/crawl/', {
-        input_Link: inputLink,
+        link_fb: inputLink,
         input_option: inputOption
     });
 }

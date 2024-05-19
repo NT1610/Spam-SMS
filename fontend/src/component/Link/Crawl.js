@@ -22,8 +22,16 @@ const Crawl = () => {
     setLoading(true);
     setError('');
     try {
-      const response = await predict_crawl(userLink, algorithm);
-      setComments(response.data.comments); // assuming the API returns comments in response.data.comments
+      console.log(userLink, algorithm);
+      const [ids, authors, texts, predictions] = await predict_crawl(userLink, algorithm);
+      console.log(ids, authors, texts, predictions)
+      const commentsData = ids.map((id, index) => ({
+        id,
+        author: authors[index],
+        text: texts[index],
+        result: predictions[index],
+      }));
+      setComments(commentsData);
       setUserLink('');
     } catch (error) {
       setError('Error fetching prediction');
@@ -36,19 +44,22 @@ const Crawl = () => {
   return (
     <div className="flex flex-col items-center w-full space-y-4">
       <LinkInput value={userLink} onChange={e => setUserLink(e.target.value)} />
-      <button
-        onClick={handleLinkSubmit}
-        className="p-2 bg-blue-500 text-white rounded"
-        disabled={loading}
-      >
-        {loading ? 'Submitting...' : 'Submit'}
-      </button>
-      <button
-        onClick={handleClearText}
-        className="p-2 bg-gray-500 text-white rounded"
-      >
-        Clear
-      </button>
+      <div className="flex space-x-2">
+        <button
+          onClick={handleLinkSubmit}
+          className="p-2 bg-blue-500 text-white rounded"
+          disabled={loading}
+        >
+          {loading ? 'Submitting...' : 'Submit'}
+        </button>
+        <button
+          onClick={handleClearText}
+          className="p-2 bg-gray-500 text-white rounded"
+        >
+          Clear
+        </button>
+      </div>
+
       <select
         id="algorithmSelect"
         value={algorithm}
