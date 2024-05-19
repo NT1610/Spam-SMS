@@ -5,9 +5,12 @@ from pydantic import BaseModel
 import uvicorn
 from fastapi.staticfiles import StaticFiles
 import logistic_regression,SVM
-
+from crawl.crawl_data import FacebookScraper
 import os
 from dotenv import load_dotenv
+# import nest_asyncio
+# nest_asyncio.apply()
+
 
 # Load environment variables
 load_dotenv()
@@ -85,10 +88,19 @@ async def predict(input_data: InputData):
 
 @app.post("/crawl/")
 async def predict_crawl(input_data: InputDataFB):
-    
-    list_inputs = input_data.input_comment.split("\n")
 
-    predictions = make_predictions(list_inputs, input_data.input_option)
+    login_url = "https://www.facebook.com/?stype=lo&deoia=1&jlou=AfczHBzuFgKc5jde3dWHkPnlaB20s2OgvO2xVhdv5IidANHiSADnJtBKCyAvR6aWz5VMH83wtWkYKvxYe9USaIG-fC_7HhCmNfGXIp6jg_Ax3w&smuh=37746&lh=Ac-dfKrOH4QAtVz7HRw"
+
+    scraper = FacebookScraper(login_url, input_data.link_fb)
+    scraper.scrape()
+
+    output, text = scraper.extract_comment()
+    for o in output:
+        print(o)
+
+    df = scraper.save_data(output)
+
+    predictions = make_predictions(df["comment"], input_data.input_option)
     # predictions = [print(i) for i in predictions]
 
     predictions = [str(i) for i in predictions]
