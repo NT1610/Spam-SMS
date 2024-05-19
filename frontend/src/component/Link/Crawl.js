@@ -22,15 +22,20 @@ const Crawl = () => {
     setLoading(true);
     setError('');
     try {
+      
       console.log(userLink, algorithm);
-      const [ids, authors, texts, predictions] = await predict_crawl(userLink, algorithm);
-      console.log(ids, authors, texts, predictions)
+      const response  = await predict_crawl(userLink, algorithm);
+      // console.log(response)
+      const [ids, authors, texts, predictions] = response.data;
+      console.log(ids, authors, texts, predictions);
+
       const commentsData = ids.map((id, index) => ({
         id,
         author: authors[index],
         text: texts[index],
         result: predictions[index],
       }));
+
       setComments(commentsData);
       setUserLink('');
     } catch (error) {
