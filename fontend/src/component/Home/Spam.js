@@ -39,21 +39,24 @@ const Spam = () => {
     return (
         <div className="flex flex-col items-center w-full space-y-4">
             <TextInput value={userText} onChange={e => setUserText(e.target.value)} />
-            
+
             {console.log(algorithm)}
-            <button
-                onClick={handleCommentSubmit}
-                className="p-2 bg-blue-500 text-white rounded"
-                disabled={loading}
-            >
-                {loading ? 'Submitting...' : 'Comment'}
-            </button>
-            <button
-                onClick={handleClearText}
-                className="p-2 bg-gray-500 text-white rounded"
-            >
-                Clear
-            </button>
+            <div className="flex space-x-2">
+                <button
+                    onClick={handleCommentSubmit}
+                    className="p-2 bg-blue-500 text-white rounded"
+                    disabled={loading}
+                >
+                    {loading ? 'Submitting...' : 'Comment'}
+                </button>
+                <button
+                    onClick={handleClearText}
+                    className="p-2 bg-gray-500 text-white rounded"
+                >
+                    Clear
+                </button>
+            </div>
+
             <select
                 id="algorithmSelect"
                 value={algorithm}
