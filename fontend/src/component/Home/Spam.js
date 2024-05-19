@@ -61,7 +61,7 @@ const Spam = () => {
                 className="p-2 border border-gray-400 rounded"
             >
                 <option value="SVM">SVM</option>
-                <option value="naive-bayes">Naive-Bayes</option>
+                <option value="ANN">ANN</option>
                 <option value="logistic-regression">Logistic Regression</option>
             </select>
             {error && (
