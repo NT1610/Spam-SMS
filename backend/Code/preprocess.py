@@ -4,7 +4,7 @@ import pickle
 import re
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 import py_vncorenlp
-
+import joblib
 vncore = py_vncorenlp.VnCoreNLP(save_dir="../Model", annotators=["wseg"], max_heap_size='-Xmx500m')
 
 def vncore_process(data):
@@ -39,7 +39,7 @@ def preprocess(data):
         data = ' '.join(data)
     return data
 
-def countVectorizer_fit(data):
+def countVectorizer_fit(data): 
     #Load precessed_data
     processed_data = preprocess(data)
     # Load stopwords
@@ -48,8 +48,9 @@ def countVectorizer_fit(data):
     # Vectorize text
     vectorizer = CountVectorizer(stop_words=stopwords)
     data_vectorized = vectorizer.fit_transform(processed_data)
+    joblib.dump(data_vectorized,r"C:\Users\lalal\Desktop\code_tutorial\data_mining\final\Spam-SMS\backend\Model\countvecterize.pkl")
     return vectorizer, data_vectorized
-    
+
 def tfidfVectorizer_fit(data):
     #Load precessed_data
     processed_data = preprocess(data)
@@ -59,4 +60,5 @@ def tfidfVectorizer_fit(data):
     # Vectorize text
     vectorizer = TfidfVectorizer(stop_words=stopwords)
     data_vectorized = vectorizer.fit_transform(processed_data)
+    
     return vectorizer, data_vectorized
