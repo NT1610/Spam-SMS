@@ -4,7 +4,7 @@ from fastapi.responses import FileResponse
 from pydantic import BaseModel
 import uvicorn
 from fastapi.staticfiles import StaticFiles
-import logistic_regression,SVM
+import logistic_regression,SVM,ANN
 from crawl.crawl_data import FacebookScraper
 import os
 from dotenv import load_dotenv
@@ -70,8 +70,16 @@ def make_predictions(list_inputs, algorithm):
             model_vectorizer=vectorizer_file,
             model_predict=model_file,
         )
+    elif algorithm == "ANN":
+        model_file = "../Model/ann.pkl"
 
-        return list(predict)
+        predict = ANN.make_predictions_vectorrizer(
+            data=list_inputs,
+            model_vectorizer=vectorizer_file,
+            model_predict=model_file,
+        )
+    # print(predict)
+    return list(predict)
 
 
 # Endpoint to handle text predictions

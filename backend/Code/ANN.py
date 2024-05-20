@@ -15,7 +15,7 @@ import preprocess
 import joblib
 
 
-def make_predictions(data, model_vectorizer, model_predict):
+def make_predictions_vectorrizer(data, model_vectorizer, model_predict):
     model_vec_load = joblib.load(model_vectorizer)
     model_pred_load = joblib.load(model_predict)
     new_data = pd.Series(data)
@@ -23,12 +23,12 @@ def make_predictions(data, model_vectorizer, model_predict):
 
     model_trans = model_vec_load.transform(new_data)
     predict = model_pred_load.predict(model_trans)
-
-    return int(predict)
+    predict = [int(i) for i in predict]
+    return predict
 
 
 if __name__ == '__main__':
     model_vec = r"..\Model\countvecterize.pkl"
     model_pred = r"..\Model\ann.pkl"
-    predict = make_predictions("anh quý đang tuyển nhân viên cà phê đi bán cần",model_vec,model_pred)
+    predict = make_predictions_vectorrizer("anh quý đang tuyển nhân viên cà phê đi bán cần",model_vec,model_pred)
     print(predict)
