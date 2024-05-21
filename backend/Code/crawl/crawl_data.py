@@ -8,15 +8,17 @@ from underthesea import word_tokenize
 import time
 import re
 import asyncio
+from pymongo import MongoClient
+import logging
 import psycopg2
 from crawl.acc_pass import (
     ACCOUNT,
     PASS,
     USER_DATA_DIR,
     HOST_DB,
+    PORT_DB, 
     NAME_DB,
-    USER_DB,
-    PASSWORD_DB,
+    COLLECTION_NAME,
 )
 
 
@@ -124,32 +126,31 @@ class FacebookScraper:
     @staticmethod
     def store_to_db(data):
         try:
-            db_conn = psycopg2.connect(
-                host=HOST_DB, database=NAME_DB, user=USER_DB, password=PASSWORD_DB
-            )
-            cursor = db_conn.cursor()
+            # Kết nối tới MongoDB server
+            client = MongoClient(host=HOST_DB, port=PORT_DB)
+            
+            # Lấy database
+            db = client[NAME_DB]
+            
+            # Lấy collection
+            collection = db[COLLECTION_NAME]
 
-            create_table_query = """
-                CREATE TABLE IF NOT EXISTS facebook_comments (
-                    user_id VARCHAR(255),
-                    user_name VARCHAR(255),
-                    comment_text TEXT
-                );
-            """
-            cursor.execute(create_table_query)
-
+            # Tạo collection nếu chưa tồn tại (MongoDB sẽ tự động tạo khi bạn chèn dữ liệu)
             for record in data:
-                insert_query = """
-                    INSERT INTO facebook_comments (user_id, user_name, comment_text)
-                    VALUES (%s, %s, %s);
-                """
-                cursor.execute(insert_query, (record[0], record[1], record[2]))
+                # Chuyển đổi record thành định dạng dictionary
+                document = {
+                    "user_id": record[0],
+                    "user_name": record[1],
+                    "comment_text": record[2]
+                }
+                # Chèn document vào collection
+                collection.insert_one(document)
 
-            db_conn.commit()
-            cursor.close()
-            db_conn.close()
+            # Đóng kết nối
+            client.close()
         except Exception as e:
-            print("Error storing data to database:", e)
+            logging.error("Error storing data to MongoDB: %s", e)
+            print("Error storing data to MongoDB:", e)
 
     async def scrape(self):
         async with async_playwright() as p:
@@ -193,9 +194,10 @@ class FacebookScraper:
 
 
 async def main():
-    login_url = "https://www.facebook.com/?stype=lo&deoia=1&jlou=AfczHBzuFgKc5jde3dWHkPnlaB20s2OgvO2xVhdv5IidANHiSADnJtBKCyAvR6aWz5VMH83wtWkYKvxYe9USaIG-fC_7HhCmNfGXIp6jg_Ax3w&smuh=37746&lh=Ac-dfKrOH4QAtVz7HRw"
-    post_url = "https://www.facebook.com/langthanghanoiofficial/posts/pfbid0gGc5F6ARLPz4oLSZee9w82Q7KuasUoWX2t4nZDjKpGJWoMkDSVGX1W8zvpLfStWtl"
+    login_url = "https://www.facebook.com/?stype=lo&deoia=1&jlou=AfczHBzuFgKgGc5F6ARLPz4oLSZee9w82Q7KuasUoWX2t4nZDjKpGJWoMkDSVGX1W8zvpLfStWtl"
 
+    post_url = "https://www.facebook.com/langthanghanoiofficial/posts/pfbid0c5jde3dWHkPnlaB20s2OgvO2xVhdv5IidANHiSADnJtBKCyAvR6aWz5VMH83wtWkYKvxYe9USaIG-fC_7HhCmNfGXIp6jg_Ax3w&smuh=37746&lh=Ac-dfKrOH4QAtVz7HRw"
+    
     scraper = FacebookScraper(login_url, post_url)
     await scraper.scrape()
 
@@ -204,11 +206,11 @@ async def main():
     #     print(o)
 
     scraper.save_data(output)
-
-    try:
-        scraper.store_to_db(output)
-    except Exception as e:
-        print("Unable to store data:", e)
+    # scraper.store_to_db(output)
+    # try:
+    #     scraper.store_to_db(output)
+    # except Exception as e:
+    #     print("Unable to store data:", e)
 
     # scraper.visualize_text(text)
 
