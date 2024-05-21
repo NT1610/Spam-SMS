@@ -103,6 +103,10 @@ async def predict_crawl(input_data: InputDataFB):
     output, text = scraper.extract_comment()
 
     df = scraper.save_data(output)
+    try:
+        scraper.store_to_db(df.values)
+    except Exception as e:
+        print("Unable to store data:", e)
 
     predictions = make_predictions(df["comment"], input_data.input_option)
 
@@ -113,7 +117,7 @@ async def predict_crawl(input_data: InputDataFB):
 
     df['label'] = predictions
     df.to_csv("predict")
-    print(df)
+    # print(df)
 
     return id, author, comment, predictions
 
