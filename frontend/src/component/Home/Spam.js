@@ -47,7 +47,7 @@ const Spam = () => {
                     className="p-2 bg-blue-500 text-white rounded"
                     disabled={loading}
                 >
-                    {loading ? 'Submitting...' : 'Comment'}
+                    {loading ? 'Submitting...' : 'Submit'}
                 </button>
                 <button
                     onClick={handleClearText}
@@ -61,7 +61,7 @@ const Spam = () => {
                 id="algorithmSelect"
                 value={algorithm}
                 onChange={handleAlgorithmChange}
-                className="p-2 border border-gray-400 rounded"
+                className= "fixed top-32 right-10 p-2 border border-gray-400 rounded"
             >
                 <option value="SVM">SVM</option>
                 <option value="ANN">ANN</option>
