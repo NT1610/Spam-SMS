@@ -1,0 +1,8 @@
+playwright
+underthesea
+bs4
+pymongo
+asyncio
+fastapi
+sklearn
+joblib
