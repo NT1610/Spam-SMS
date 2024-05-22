@@ -53,17 +53,17 @@ class InputDataFB(BaseModel):
 # Define function to make predictions
 def make_predictions(list_inputs, algorithm):
     # print(list_inputs, algorithm)
-    vectorizer_file = "../Model/countvecterize.pkl"
+    vectorizer_file = "../Model/countvecterize_final.pkl"
 
     if algorithm == "logistic-regression":
-        model_file = "../Model/logistic.pkl"
+        model_file = "../Model/logis_final.pkl"
         return logistic_regression.make_predictions_vectorrizer(
             data=list_inputs,
             model_vectorizer=vectorizer_file,
             model_predict=model_file,
         )
     elif algorithm == "SVM":
-        model_file = "../Model/svm_model.pkl"
+        model_file = "../Model/svm_countvecterize_final.pkl"
 
         predict = SVM.make_predictions_vectorrizer(
             data=list_inputs,
@@ -71,7 +71,7 @@ def make_predictions(list_inputs, algorithm):
             model_predict=model_file,
         )
     elif algorithm == "ANN":
-        model_file = "../Model/ann.pkl"
+        model_file = "../Model/ann_final.pkl"
 
         predict = ANN.make_predictions_vectorrizer(
             data=list_inputs,
@@ -85,7 +85,7 @@ def make_predictions(list_inputs, algorithm):
 # Endpoint to handle text predictions
 @app.post("/predict/")
 async def predict(input_data: InputData):
-    list_inputs = input_data.input_comment.split("\n")
+    list_inputs = input_data.input_comment#.split("\n")
 
     predictions = make_predictions(list_inputs, input_data.input_option)
     # predictions = [print(i) for i in predictions]
@@ -102,7 +102,7 @@ async def predict_crawl(input_data: InputDataFB):
     await scraper.scrape()
     output, text = scraper.extract_comment()
 
-    df = scraper.save_data(output)
+    df = scraper.save_data(output).dropna()
     try:
         scraper.store_to_db(df.values)
     except Exception as e:

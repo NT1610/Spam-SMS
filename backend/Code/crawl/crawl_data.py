@@ -16,7 +16,7 @@ from crawl.acc_pass import (
     PASS,
     USER_DATA_DIR,
     HOST_DB,
-    PORT_DB, 
+    PORT_DB,
     NAME_DB,
     COLLECTION_NAME,
 )
@@ -42,15 +42,17 @@ class FacebookScraper:
     async def load_more_comments(self):
         start_time = time.time()
         try:
-            while (
-                await self.page.get_by_role("button", name="Xem thêm bình luận")
-                is not None
-            ):
+            while True:
+                load_more_button = await self.page.get_by_role(
+                    "button", name="Xem thêm bình luận"
+                )
+                if load_more_button is None:
+                    break
                 await self.page.get_by_role("button", name="Xem thêm bình luận").click(
                     timeout=2000
                 )
                 print("Loading more comments...")
-                await self.page.wait_for_timeout(1000)
+                await self.page.wait_for_timeout(500)
         except Exception as e:
             print("Error loading more comments:", e)
         end_time = time.time()
@@ -69,9 +71,9 @@ class FacebookScraper:
         await self.page.locator(
             "//div[@class='x6s0dn4 x78zum5 xdj266r x11i5rnm xat24cr x1mh8g0r xe0p6wg']"
         ).click()
-        await self.page.wait_for_timeout(1000)
+        await self.page.wait_for_timeout(500)
         await self.page.get_by_role("menuitem").last.click()
-        await self.page.wait_for_timeout(1000) #3000
+        await self.page.wait_for_timeout(500)  # 3000
 
     async def click_read_more(self):
         try:
@@ -83,7 +85,11 @@ class FacebookScraper:
 
     @staticmethod
     def remove_stopword(input_text):
-        with open(r"G:\Year3\DataMining\CuoiKi\Spam-SMS\backend\Code\crawl\vietnamese-stopwords.txt", "r", encoding="utf8") as f:
+        with open(
+            r"G:\Year3\DataMining\CuoiKi\Spam-SMS\backend\Code\crawl\vietnamese-stopwords.txt",
+            "r",
+            encoding="utf8",
+        ) as f:
             stop_words = f.readlines()
             stop_words = set(m.strip() for m in stop_words)
         words = word_tokenize(input_text)
@@ -128,10 +134,10 @@ class FacebookScraper:
         try:
             # Kết nối tới MongoDB server
             client = MongoClient(host=HOST_DB, port=PORT_DB)
-            
+
             # Lấy database
             db = client[NAME_DB]
-            
+
             # Lấy collection
             collection = db[COLLECTION_NAME]
 
@@ -141,7 +147,7 @@ class FacebookScraper:
                 document = {
                     "user_id": record[0],
                     "user_name": record[1],
-                    "comment_text": record[2]
+                    "comment_text": record[2],
                 }
                 # Chèn document vào collection
                 collection.insert_one(document)
@@ -163,6 +169,7 @@ class FacebookScraper:
                 ignore_default_args=["--enable-automation"],
             )
             self.page = await self.browser.new_page()
+            print(self.page.get_by_role("button", name="Xem thêm bình luận").all())
             await stealth_async(self.page)
             await self.page.route("**/*", self.block_resources)
             await self.page.goto(self.login_url, timeout=0)
@@ -171,15 +178,18 @@ class FacebookScraper:
 
             try:
                 await self.show_all_comments()
+                print("show_all_comments")
                 await self.load_more_comments()
+                print("load_more_comments")
                 await self.click_read_more()
+                print("click_read_more")
             except Exception as e:
                 print("Error during scraping:", e)
                 await self.sign_out()
             finally:
                 await self.page.wait_for_load_state("networkidle")
                 self.soup = BeautifulSoup(await self.page.content(), "lxml")
-                await self.page.wait_for_timeout(1000)
+                await self.page.wait_for_timeout(500)
                 await self.page.close()
                 await self.browser.close()
 
@@ -197,7 +207,7 @@ async def main():
     login_url = "https://www.facebook.com/?stype=lo&deoia=1&jlou=AfczHBzuFgKgGc5F6ARLPz4oLSZee9w82Q7KuasUoWX2t4nZDjKpGJWoMkDSVGX1W8zvpLfStWtl"
 
     post_url = "https://www.facebook.com/langthanghanoiofficial/posts/pfbid0c5jde3dWHkPnlaB20s2OgvO2xVhdv5IidANHiSADnJtBKCyAvR6aWz5VMH83wtWkYKvxYe9USaIG-fC_7HhCmNfGXIp6jg_Ax3w&smuh=37746&lh=Ac-dfKrOH4QAtVz7HRw"
-    
+
     scraper = FacebookScraper(login_url, post_url)
     await scraper.scrape()
 
@@ -213,6 +223,7 @@ async def main():
     #     print("Unable to store data:", e)
 
     # scraper.visualize_text(text)
+
 
 if __name__ == "__main__":
     asyncio.run(main())

@@ -1,83 +1,179 @@
 ,id,name,comment,label
-0,0,Hương Trịnh,Mình cũng z á ,0
-1,1,Phan Quang Huy,Chính là toiii,0
-2,2,Như Quỳnh,Ui tui cũng thía có khi nào crush của tui 3 bữa nữa cũng công khai ny k ,0
-3,3,Lann Naa Tran,Thật sự:)),0
-4,4,Lê Văn Tân,Mình cx mát tay phết đấy ,0
-5,5,Lê Thu,Yêu thiên nhiên đi các bạn. Ko yêu đương trai gái nữa,0
-6,6,Lèo Xuân Bắc,nội tại ẩn :)),0
-7,7,Đinh Thị Thu Ngânn,lấy vợ luôn í chứ :)),0
-8,8,Trần Đình Lực,ai cần ntin liên hệ ngay chứ tôi mát tay lắm ,0
-9,9,Nguyễn Huy,Thế thì sau ko nhắn tin nữa chỉ call thui đc ko ,0
-10,10,Hoàng Minh Đông,thấy mình đỉnh cao vcl ra ,0
-11,11,Tran Sunyloc,"Lập team đi, tui bổ nhiệm bạn làm leader ",0
-12,12,Ngọc Em,Siêu năng lực,0
-13,13,Tố Uyên,Mát tay thiệc :)),0
-14,14,Quang Minh,Người mai mối,0
-15,15,Cao Chinh,Phạm Hải Nam  chúc mừng bạn có ny :)),0
-16,16,Thich Duong,Trùm của năng lực này luôn,0
-17,17,Phạm Thị Linh,Giờ thì mình biết tại sao kh ai nhắn tin với mình rồi-)),0
-18,18,Ngọc Anhh,Cũng hài ,0
-19,19,Hưng Kidd,nhắn tin với 10 cô thì 10 cô không rep ,0
-20,20,Linh,Chắc kiếp trước làm nghề bà mối,0
-21,21,Hoàng Long,Năng khiếu.,0
-22,22,Đỗ Đức Thuận,Siêu năng lực ,0
-23,23,Vũ Hải Đăng,Siêu năng lực này mình cũng có,0
-24,24,Tuyết Nguyễn,Khéo đáo để,0
-25,25,Nghiêm Xuân Khiêm,Vậy là tài năng zữ chưa :)),0
-26,26,Tử Đinh Hương,công đức vô lượng,0
-27,27,Chanz Chanz,Siêu năng lực :)),0
-28,28,Đặng Thị Ngọc Mai,khó thế cũng làm được,0
-29,29,Ng.T Ngọc Lan,Có lẻ nào-),0
-30,30,Tuấn,Siêu năng lực ,0
-31,31,Ng Thanh Thủy,Cứ ib nhiệt tình vào,0
-32,32,Tân Hoàng Chinh,Riết rồi thành ông mai bà mối,0
-33,33,Nguyễn Đức Quang,kiểu này đi cắt duyên âm,0
-34,34,Phương Hoa,Phải có căn mới làm đc đấy,0
-35,35,Khánh Nam,Thế ms chán chứ.,0
-36,36,Chang Chang,lạ thậc,0
-37,37,La Lệ,Mát tay quá còn gì,0
-38,38,Vịt Con,nhuL ấy,0
-39,39,Đinh Thị Hải Yến,Mát tay quá còn gì ,0
-40,40,Lường Thị Huyền,cái duyên cái số kkk,0
-41,41,Phạm Khánh Thùy,Mát tay:)),0
-42,42,Trần Văn Dân,Giống tui zị,0
-43,43,Nguyễn Thuỳ Linhh,Đc cấy mát tay rứa đó:)),0
-44,44,Dương Én,"Đé0 phải đâu, mà là m đé0 đc chọn đấy :))))",0
-45,45,Bùi Xuân Chử,Nên không nhắn với ai làm gì,0
-46,46,Đức Cươngg,Còn phải lóiii,0
-47,47,Hoàng Quân,Siêu năng lực ,0
-48,48,Hải Yến,có người còn lấy vợ luôn ấy chứ :)))),0
-49,49,Phạm Tuấn,giống t,0
-50,50,Phạm Thúy,Ae lại bảo k phải điiii ,0
-51,51,Nguyễn Linh,Hihi giỏi thế cơ à,0
-52,52,Hương Gianng,Huê siêu năng lực đó ,0
-53,53,Hoang Huy Khanh,Hưng Trần Quốc trộm vía quá nhờ,0
-54,54,Nguyen Thi Phượng,Hài,0
-55,55,Thảo Trần,Chính tôi đây,0
-56,56,Kieu Trang,Căm,0
-57,57,Phạm Tuyển,Tuyệt vời :)),0
-58,58,Thu Hiền,Giang Pham thế bạn có ny chưa,0
-59,59,Nguyen Anh Tuan,Khổ..!,0
-60,60,Xuân Thu,Quynh Hoa nhột không ?,0
-61,61,Dương Công Trinh,Sao mà đỡ đc=)),0
-62,62,Ngõ Nhỏ,Vậy mày lang thang HN là phải rồi..,0
-63,63,Hoàng Đình Thắng,,0
-64,64,Dũng Đỗ,Nghĩ mà ,0
-65,65,Phạm Quỳnh Trang,Anh Hana,0
-66,66,Tran Thi Thu Huong,=))),0
-67,67,Anh Thắng,=))),0
-68,68,Nguyễn Văn Tuấn,:))),0
-69,69,Oanh,.,0
-70,70,Phùng Thái,:))),0
-71,71,Hoàng Yến,,0
-72,72,Vũ Văn Khương,,0
-73,73,Kim Long,Hậu Nguyễn,0
-74,74,Ninh Cuốn,#sticker,1
-75,75,Lê Na,,0
-76,76,Trang Hà,bùn,0
-77,77,Mắm Lăng Cô tại Đà Nẵng,Hi,0
-78,78,Sói Kiêu,Haha,0
-79,79,Đào Văn Minh,Mee too,0
-80,80,Lưu Khánhh Huyềnn,Haizzz,0
-81,81,Phạm Xuân Khánh,Phạm Xuân Khánh,0
+0,0,Cột sống GenZ,"""đu idol vậy rồi có để tiền dẫn ba mẹ đi ăn bữa nào chưa""",0
+1,1,Cột sống GenZ,"""Làm ra tiền đâu mà đi chơi dữ vậy""",0
+2,2,Ngô Mạc Ngọc Nhi,"Cgi xấu cx chụp mũ cho genZ, nghe ghét vc",0
+3,3,Cột sống GenZ,"""Nhân sự GENZ hay nhảy việc""",0
+4,4,Vũ Nguyệt Hàn,"""mấy đứa bây giờ làm sao hiểu được, hồi đó mấy bác bla bla..., Giờ chúng mày được cưng chiều quá nên sinh tật, cái gì cũng có thì làm sao mà hiểu...""",0
+5,5,Bùi Trương Thuý Vân,"Đúng. Tại tao, là tao làm đó được chưa",0
+6,6,Cột sống GenZ,.... khổ lắm.,0
+7,7,Trần Thuý,"Người tiêu cực thì nhìn ai cũng là người xấu,kệ mẹ họ đi :)))",0
+8,8,Mỹ Nhàn,"GenZ hỗn, không biết dùng kính ngữ  GenZ yêu đương qua loa, không nghiêm túc  Nghe lần nào là thích mê lần đó luôn á",0
+9,9,Yên Yên,"Cái gì cũng đổ thừa GenZ, nói GenZ tâm lý yếu hay dễ tự ái, xốc nổi đồ gì đó",0
+10,10,Tắc Kè Bông,"""Mấy đứa bây giờ làm sao biết hồi đó...""",0
+11,11,Quýt Nè,"""Bệnh trầm cảm là do gen Z tự tạo ra cho cái cớ của sự lười biếng, ngày xưa làm gì có ai bị trầm cảm?"" ",0
+12,12,Linh Đan,"Bọn genz hỗn, bật sếp như tôm bla bla  Chứ quyền lợi của mình mà sếp vô lí ko đc nói lại hả:((",0
+13,13,Tuấn Trần,Hồng Vy xem người ta nói gì về genz nè bà ,0
+14,14,Thanh Hiền,Lê Ngọc Khánh Vân bữa nói nè ,0
+15,15,Thảo Nguyênn,"""GenZ tụi nó hỗn lắm, nói gì là tụi nó nói lại à"" ủa thì quyền lợi mình bị ảnh hưởng nên phải nói để lấy lại chứ ko lẽ em để yên?",0
+16,16,Nguyên Võ,Tụi Gen Z giờ tâm lí yếu thật:)))- trích từ người lớn hay nói với t nhất ,0
+17,17,Phi Long Tran,Giàu.,0
+18,18,Trương Tiến Đạt,"T team đáchhh-quan-tâm, kệ mẹ miệng đời mà sống ",0
+19,19,Thiên Nhi,"Mình thấy báo VN Express ghék genZ lắm, lần nào đọc báo cũng có báo về genZ :((",0
+20,20,Nguyễn Đăng Trung,Mỗi người mỗi suy nghĩ một góc nhìn khác nhau k phải ai cũng giống ai nên có chịu định kiến là chuyện rất rất bình thường k đáng phải nói,0
+21,21,Nguyễn Lê Phương Nam,Bảo Huy cãi style genz,0
+22,22,Quynh Nguyen,Vân Thúy qq j cũng gen z sai,0
+23,23,Kim Ngân,Kim Ngọc trộm día là t ch nghe câu nào định kiến áp đặt genz chứ ko chắc t bật lại đôm đốp,0
+24,24,Ellis Vu,Bằng tuổi tụi mày hồi xưa tao đã…,0
+25,25,Hoàng Thu Thủy,Cứ cái gì để chữ GenZ vào là t ghét ,0
+26,26,Hoài Phương,"""Gen Z tự cho mình là giỏi"" ê k có vơ đũa cả nắm nha",0
+27,27,Châu Vũ,"""GenZ tâm lý yếu nên dễ bệnh tâm lý, hồi xưa khổ hơn nhiều lm gì có ai bị đâu""",0
+28,28,Thị Đẹp,cái gì trẩu trẩu là auto genZ :))),0
+29,29,Hồng My,GenZ và phần còn lại của thế giới,0
+30,30,Chy,Sống buông thả. Ham chơi :))) đmmm,0
+31,31,Nguyễn Mỹ Duyên,"""Gen Z muốn nói gì thì nói, làm gì thì làm."" ""Gen Z bây giờ sướng, ngày xưa cực khổ hơn mà vẫn chịu được"" ""Gen Z tâm lý yếu"" ""Gen Z chẳng biết tuổi thơ là gì, suốt ngày chỉ cắm mặt vào điện thoại"" ""Nhạc của Gen Z dở hơi"".... lulublablah. Gen này gen ki… Xem thêm",0
+32,32,Hải Nam,Ảo tưởng =)),0
+33,33,Trần Thanh Nguyệt,Wie Tran genz auto trẩu,0
+34,34,Chou Chou,"“Đồng nghiệp gen z vô trách nhiệm, ny gen z trẻ con đua đòi, gen z ham ăn lười làm, gen z đú đởn trầm cảm, gen z abc….” Nói chung cái gì xấu là gen z hết á mấy má :))))",0
+35,35,Tâm Nguyễn,"""Genz giờ dùng cái gì cũng hiện đại, đâu hiểu nỗi khổ của thế hệ trước, nấu cái nồi cơm chưa chắc được"" xin lỗi chứ 2k8 hồi bé vẫn nhóm bếp củi bth, cũng lăn lộn đủ kiểu vậy",0
+36,36,Minh Minh,"Genz giàu, t nghèo vl",0
+37,37,Trần Đức,"""Thế hệ vượt sướng ? """,0
+38,38,Lee Hangg,cái đ gì xấu cũng đổ cho genz,0
+39,39,Thảo Nguyên,,0
+40,40,Nguyễn Thư,"cái gì trẩu trẩu là "" trung bìng genZ """,0
+41,41,Maicua Thanh,Vấn đề hôn nhân ,0
+42,42,Hường Nguyễn,"Anh thấy bọn GenZ khó bảo nhỉ, chắc ở nhà bố mẹ khó bảo lắm hả",0
+43,43,Tram Anh Ng,"Lê Khánh Ngọc “tụi bây thời đại genz giờ nói xíu là khóc hả, mong manh dễ vỡ quá ha?” ",0
+44,44,Trần Gia Bảo,Clz gì cũng GenZ ,0
+45,45,Rin,Từng được 1 nhân sự genz nói rằng: cái anh hơn em chỉ là 4 năm kinh nghiệm thôi,0
+46,46,Nguyễn Thủy Tiên,Minh Châu,0
+47,47,Nghi  Vũ,Phương Linhh như cmt,0
+48,48,Quỳnh Châu,Kim Châu tự nhiên nhớ tới hồi đầu kì cô VH nói dụ đăng story pạn thân tôi  kiu mốt em đi làm có cái j bức xúc thì em đừng có đăng tùm lum lên mxh  chữ nào câu nào là tùm lum đâu tr tôi cho mn biết là tôi từng phải chịu đựng những đứa học hành teamwor… Xem thêm,0
+49,49,Lê Ngọc Thuyên Minh,"“Genz, giới trẻ bây giờ buông thả quá” không thấy khó chịu nhưng mà đáng để ngẫm lại một tí",0
+50,50,Trần Phương,"Thấy tự do ngôn luận nên cái tôi cá nhân cao quá, đi lm k biết phép tắc, k biết trên dưới, ưng là nói nên k đc lòng người lớn tuổi",0
+51,51,Vũ Thùy Dương,"Gen Z giàu, đi làm vì đam mê, bố mẹ gánh hết  thế còn trường hợp nghèo như em thì sao ",0
+52,52,Lục Diệp,"GenZ toàn mấy đứa lãng phí , dở dở ương ương … Nhưng genZ thực tế hướng nội hơn các gen khác nhiều",0
+53,53,Thảo Linh Nguyễn,"Tại sao cái post này sinh ra zậy, chủ thớt có phải gen Z hông z",0
+54,54,Ph Giang,"Vấn đề khác mn nói rồi nhma còn 1 kiểu là ""genz cmay ngày xưa làm sao mà biết abcxyz bla bla..."" Làm như mấy ông bà đẻ trc là biết nhiều lắm ấy mà cứ hở tí là lôi genz vào tỏ vẻ",0
+55,55,Trang Nguyen,Gen Z hay cãi nói gì cũng cãi đc nói ra cái là cãi chem chẻm chem chẻm  ghét thiệc chứ nói đúng thì ngta lắng nghe chứ nói khùng nói điên cái kêu nghe. Nghe là nghe sao má? Học hành có chọn lọc chứ quần què gì cũng học ha ????,0
+56,56,Trang Nguyen,"""ĐÚNG LÀ GEN Z"" chúa ghét câu này :)))",0
+57,57,Nhu Nguyen,Trương Ng Thanh Thảo,0
+58,58,Nguyễn Phương Nhi,"“Tụi bay giờ sướng gần chết, cái gì cũng có sẵn “",0
+59,59,Tran Thuan Tai,Tao thấy tụi nó ồn =)),0
+60,60,Trà Cẩm Phát,Bằng tuổi chúng m hồi xưa tụi tao… ,0
+61,61,Thảo Uyên,"""sao genz gì mà viết content cứng nhắc vậy"" ",0
+62,62,Trọng Nhân,TẤT CẢ LÀ TẠI TÔI Tuan Hoàng Anh Ngân,0
+63,63,Lý Hưng,"Tụi nhỏ bây giờ ăn sung mặc sướng, nắng không đến vai mưa không đến đầu mà cũng bị overthinking ",0
+64,64,Thanh Bùi,Cho mình hỏi genz tính từ 97 hay 2000 z,0
+65,65,Lpl Giang,Lp Broccoli còm men,0
+66,66,Lương Thị Ngọc Ánh,vô mấy bài viết nói về hs chịu áp lực phải 44 ấy. bên dưới cả nùi định kiến ,0
+67,67,Lalaylilo Lolale,Gen ji ri tat,0
+68,68,Minh Nguyet Bui,Sương Sương ,0
+69,69,Thanh Thanh,GenZ đứa nào cũng xăm mình nhuộm tóc hút thuốc hút pod,0
+70,70,Раиса Луу,"""ngữ gì mà đi khóc vì mấy thg mấy con Hàn Quốc trong khi cha mẹ ở nhà thì ko khóc"" tbinh định kiến về GenZ khi đu Kpop",0
+71,71,Trần Hà,Lan Phương lao công trưởng đòi mức lương 50tr ,0
+72,72,Đào Thuỷ Tiên,"Dễ trầm cảm, yếu đuối,..",0
+73,73,Vu Ngoc Anh,Mấy bà said: c gái mặc quần túi hộp ->giống c trai-> bede:)),0
+74,74,Ngọc Ánh,"""GenZ đi làm rất ngông và láo, không coi ai ra gì"" =))))",0
+75,75,Nguyễn Ánh Quyên,"""Đu idol có làm đc ra tiền/ mài ra mà ăn được không?""",0
+76,76,Trung Thịnh,"Hở tí trầm cảm ;))) lên google đọc vài web là tự nhận trầm cảm, rồi tự mua thuốc uống này kia. Bố khỉ.",0
+77,77,Nguyễn Khoa Nghĩa,theo t thì genz điểm tốt điểm xấu đều có nhưng nói thật thì genz có nhiều điểm xấu hơn thế hệ trước,0
+78,78,Thư Nguynn,"""Đu idol có kiếm đc ra tiền ko mà sao suốt ngày m xem thế"" ",0
+79,79,Thanh Huy,GenZ hướng ngoại lắm ,0
+80,80,Quang Có Lốc,Phong cách ăn mặc:),0
+81,81,Khanh Huyen,"""Idol nó làm sao thì nó khóc còn cha mẹ ở nhà thì không"" ủa cha mẹ mình có làm sao đâu khóc để bị đuổi ra khỏi nhà à??",0
+82,82,Chino Arlec,t bt thằng kia genz nó kêu t là thằng trẻ trâu do tính t hiền hiền giỡn giỡn. trong khi t 9x còn nó 2kx. Nó còn bảo là mấy th như m k xứng đáng dc tôn trọng,0
+83,83,An Thùy,"""Giới trẻ độc thân là ích kỷ không biết nghĩ cho gia đình và xã hội""",0
+84,84,Đặng Thu Ngân,Cái gì xấu cũng đổ genz :))),0
+85,85,Tôn Nữ Khiêm Cung,"Không phải genz nhưng hễ thấy định kiến về genz thì rất khó chịu. Tuổi trẻ thì sự nông nổi, bồng bột và ngông cuồng thế hệ nào cũng có nhưng giờ thế hệ 9x, 8x cứ đổ tất cả lên genz bằng cái thói dạy đời.",0
+86,86,Ngọc Hà,"M bâyh lm s hiểu đc, hồi xưa cỡ tuổi m t lm trăm công nghìn vc, bâyh m chỉ bt xem đt",0
+87,87,Thanh Thủy,"""M hâm mộ nó r có mài ra tiền ăn không, bố mẹ ở nàh thì kh vậy đi"" mắ hài vl",0
+88,88,Hạ Vy,"định kiến genz đi làm như đi chơi, ko coi sếp ra gì",0
+89,89,Hoàng Minh Yến,"""Chỉ có ăn với học mà than khổ cái gì :)) tiền chả phải lo với nghĩ, học hành có tí mà cũng k đc nổi điểm cao. Cho cm về thời xưa có mày chet à?"" Ôi lạy người sao cứ mang những thứ khập khiễng so sánh với nhau z :)))",0
+90,90,Chino Arlec,Genz rất tốt sao ai cũng phản cảm chứ. Genz thấy sếp la thì bỏ dự án bật luôn sếp. Genz đụng là chửi đụng là đập. Genz đầu đội trời chân đạp đất mạnh mẽ k nể nang vươn tới ai đụng tới thì đụng tới chết. Genz cuộc sống kinh nghiệm đầy mình k ngán đứa nà… Xem thêm,0
+91,91,Nhu Yw,bọn này bây giờ toàn giới tính lệch lạc=)),0
+92,92,Trang Lê,Bảo Như kìa,0
+93,93,Mai Chi,"Hay nhảy việc, hỗn, bốc đồng, xốc nổi",0
+94,94,Vi Sóng Lò,Phạm N.AnhQuoc Tran Dinh bt cai j ma noi ?,0
+95,95,Ngọc Như,Hoàng Quốc,0
+96,96,H-à Thành,"Cùng là genz nhưng thấy mấy đứa cứ tự nhận trầm cảm overthinking các kiểu trên mạng rồi than vl than,trg khi đó mấy thg bị thật thì nó đ bh lm v cả :))) lên mạng nó tích cực muốn chết",0
+97,97,Linh Chi,Định kiến của một số người về cộng đồng LGBT !,0
+98,98,Phương Thảo,Ath Athuong,0
+99,99,Thư Nguynn,Ebe Cua Xiumin,0
+100,100,Quoc Huy Nguyen,Gen Z trẻ trâu chỗ làm méo chịu nỗ lực hoàn thành công việc =)))),0
+101,101,Nh Thùy,genz tâm lý yếu  xin lỗi chứ cái thời đại này mà tâm lý yếu thì k còn genz để mà nói nữa đâu =))))) cứ thấy được vài người là tưởng cả thế hệ đều vậy,0
+102,102,Milo Dầm,Genz clq nè,0
+103,103,Trần Minh Ngọc,Phương Hoa ,0
+104,104,Nguyễn Ngọc Tâm Như,"Gen Z đơn giản chuyển suy nghĩ thành hành động thôi mà, điều mà những gen đi trước chưa làm được",0
+105,105,Phươngg Linhh,"hở tí là trầm cảm, có áp lực gì đâu mà hở tí là healing chữa lành ",0
+106,106,Ngọc Dung,Quà Qùa,0
+107,107,Bảo Khoa,Sao mn gặp nhìu nhỉ. Hay tại mặt già nên k ai nghĩ là 2k2 ,0
+108,108,Hạo Hạo,"Mấy đứa hay tự nhận mình bị trầm cảm, mở mồm ra trầm cảm vậy có thuộc tiêu chuẩn chẩn đoán trầm cảm chưa :))) lên search coi có k đi rồi hả nhận vơ, suốt ngàu lên mạng cười khà khà, tối về up story nhạc buồn nhận mình trầm cảm, oen",0
+109,109,Đinh Vân Ý Như,Gen Z hay bật lại:)),0
+110,110,Trứng Lòng Đào,"""Cỡ tuổi m là một mình t lo hết việc trong nhà rồi"", t nghe câu đó từ cô ba t xong t muốn đi về tp liền luôn, chứ ai rảnh phục vụ cho nguyên cái nhà :))) đàn ông thì nằm thẳng cẳng đợi cơm lên ăn, đàn bà ngồi làm quần quật dưới bếp là ko ưa nổi rồi :)))",0
+111,111,Thy Thy,"""chơi với mấy người LGBT BỊ LÂY"" ????  ",0
+112,112,Phan Huỳnh Anh,Trầm cảm có thể giả chứ overthinking là thật nha chài,0
+113,113,Khanh Toan Doan,Ko hề có định kiến gì vì các bạn ấy rất dễ thương! ,0
+114,114,Huỳnh Nhân,"Định kiến toàn do con sâu làm rầu nồi canh, nhiều thành phần ngấm k nỗi ",0
+115,115,Thoa,vô dụng,0
+116,116,Nguyen Vu Nhat Minh,"genz toàn mấy con đú đởn idol, xăm trổ, đầu xanh đầu đỏ:))) cayyyy",0
+117,117,Nguyễn Thị Phương Trinh,mặc dù là genZ nhưng hơi bị sợ cái tư tưởng khi yêu của 1 vài (hoặc đa số) các bạn genZ gần đây  bởi vị khum dám iu,0
+118,118,Cấn Quang Hưng,Cũng là genz nhưng chỉ vào để đọc cmt ,0
+119,119,Dương Trịnh Tiểuu Vân,"""Tụi 2k làm gì biết"" :)))) dạ thưa em biết hết đấy ạ, ghê gớm quá cơ",0
+120,120,Nguyễn Trần Phương Thảo,"""cái lứa GenZ tụi e toàn thụ động, kh phải a gặp lần đầu""",0
+121,121,Thin Meo Nguyễn,Em phụ mẹ bán hàng Quảng Châu các bác ơi,0
+122,122,Ky Duyen,"Cái gì cũng tỏ ra hiểu biết hết, đụng chuyện thì quăng qua người khác giải quyết",0
+123,123,Phạm Ngọc Huyền Anh,"hề là mấy má tầm 99, 98 chê genZ ấy. mấy má ơi, chúng mình cũng là genZ á  không chỉ nhắc tới mấy bé 2k trở đi đâu. mà biết sao genZ xấu xí nhiều trong mắt các gen khác ko? tại MXH á. nhiều khi đi làm gặp quản lí là gen Y xấu tính muốn chớt à, nhưng t… Xem thêm",0
+124,124,Khánh Ngọc,"Ở một quán ăn đài nào đó tại gò vấp,cắt nhân sự,lương trễ ko ai thông báo.mà hở quán ế,đi trễ 5p là bảo thế hệ ko có tương lai,làm việc ko trách nhiệm,sống sướng riết sanh tệ.rồi còn cả khách bảo ko học mốt đi làm lương ba cọc ba đồng giống mấy thằng này.",0
+125,125,BN Kỳ Duyên,Like phát xíu quay trở lại đọc tiếp ạ,0
+126,126,XuânAnh Nguyễn,"""genz chắc chắn kbt cái này"" chắc lúc nhà cmay có internet là genz vẫn dùng bồ câu liên lạc hay ji ?",0
+127,127,Nguyễn Hữu An,"Hồi đó gen x chê gen Y, r cái gen Y già r chê Gen Z. Cứ như định luật tự nhiên thôi ",0
+128,128,La Roche-Posay Vietnam,"GenZ hay sầu muộn, GenZ sạch mụn thì GenZ slayyyy ",0
+129,129,Lumière Mirer,"""GenZ hở tí là trầm cảm""  cứ khuyên là tránh các mối quan hệ tiêu cực ra, hướng về điều tích cực, phải biết chọn lọc các thứ. Giờ GenZ bị trầm cảm do gia đình thì bỏ nhà đi được chưa? Có nuôi nhau được ngày nào mà khuyên lắm thế?",0
+130,130,Nguyễn Minh Huệ,. Bị ô dờ thinh kinh :))),0
+131,131,Phương Liinh,"Sức chịu đựg kém, hở tí là trầm cảm :)))",0
+132,132,Minh Tuan,Nhận chạy tương tác cho ae giá rẻ,0
+133,133,Nguyễn Xuân Nghia,Thuỳ Duyên dô đây đọc cho nó hiêu xh hiện nay,0
+134,134,Altruist Sunscreen Vietnam,"Gen Z nhà tui tuyệt zoi, rấc keoo lì",0
+135,135,Trang Lê,"""Bây giờ GenZ cứ lao đầu vào điện thoại, máy tính xong kêu trầm cảm. Ngày xưa ông bà bố mẹ bị đánh suốt có làm sao đâu mà bây giờ chúng mày mới bị đánh có mấy cái đã đòi 44...""",0
+136,136,Mun Ka,Bữa lướt thấy bài nói về genAlpha cái genZ vô nói như cái cách 8x 9x nói về genZ bây giờ. Nói chung là 1 vòng lặp luẩn quẩn thôi ,0
+137,137,Gia Như,"Hiểu cảm giác bị coi thường ko? Hiểu cảm giác bị sỉ nhục ko? Hiểu cảm giác bị phản bội ko? Nếm mùi đau khổ chưa?,...... ",0
+138,138,Lý Đại Long,"Mình lại ghét mấy đứa tự nhận ocd hoặc là tự nhận mình bệnh tâm lý hay tâm thần mà ko có giấy khám của bác sĩ nha, người ta bệnh người ta không biết :))) Rồi giả bộ hành xử làm như mình bị đa nhân cách hay trầm cảm gì đó, mấy cái bệnh này k có đơn giản… Xem thêm",0
+139,139,Le Nguyen Doan Trang,Nói chung là cái gì xấu cái gì sai là của GenZ hết :)),0
+140,140,Nguyễn Kim Tuyến,Hỗn ,0
+141,141,Không Có Tên,Khuyết tật ngôn ngữ ,0
+142,142,Thiên Minh,"""Làm mà không biết tần tiện lấy gì dư con""",0
+143,143,Mi Ngân,Trang Nghi kìa con,0
+144,144,Cát Tường,Trâm Bầu đọc comment :)),0
+145,145,NHÀ CỦA TỚ,Gen Z qua đây chill cho bớt khóc thầm về đêm nè ,0
+146,146,Duy Đoàn,Lười,0
+147,147,Hoang Giang,"Gen z tự ái, ko gắn bó  ba mẹ t đẻ t ra nuôi t lớn để mấy ba mấy má trong cty đè đầu cưỡi cổ t hả, tìm việc như tìm ny, ko hợp, ko sửa đc thì mình ct",0
+148,148,Lian Trần,"giỏi rất giỏi, giỏi hơn các anh chị, cha ông đi trước vì có nhiều nguồn hỗ trợ từ 4.0. ngày t nghe cái t t kiểu gen Z như siu nhân chứ ko phải người bth",0
+149,149,Nguyễn Minh Tài,Tất cả là tại GenZ hết :)) được chưa,0
+150,150,Nguyễn Văn Phát Tài,Đi đâu cũng thơm là vì đi đâu cũng có HAMAL. ,0
+151,151,Đinh Thị Bảo Uyên,"Lúc nào cũng nghe câu: genz nó lạ lắm, ủa alo :))",0
+152,152,Trần Hiếu Trung,"Genz bị overthinking so với các thế hệ khác là sự thật nha, và overthinking dễ dẫn tới stressssssssss. :((",0
+153,153,Nguyễn Ngọc Phương Thảo,Tùng Ng,0
+154,154,Đỗ Mạnh Cường,"""Cột sống của bạn như 60 mặc dù mới đang tuổi 20 "" Bs said :",0
+155,155,Nguyễn Vũ Phương Quỳnh,Thảo Vy Nhat Dang Tran Le đọc đi cho hiểu chút về xã hội,0
+156,156,Ky Anh Nguyen Le,"Trái tim mỏng manh dễ vỡ, sơ hở là tâm lý liền ",0
+157,157,Ngọc Thuý,Cách nói chuyện ntn đúng kiểu genZ rồi ?,0
+158,158,Nguyễn Gia Long,phải thế nào thì mới thành định kiến =]] đừng cố bao biện cho những cái ngta nói đúng với cái nhìn của nhiều thế hệ trc =]] giãy đành đạch đấy cũng là 1 định kiến rồi ,0
+159,159,Cơ,"Rồi ai cài cắm tư tưởng ""còn trẻ thì ráng cày"" vậy trời, huhu. Tự nhiên bị ám thị như zị xong làm đuối quá nè.",0
+160,160,Trần Yến,"""m đu idol chắc học hành không ra gì đâu ha""",0
+161,161,Huyen Trang,là định kiến đó,0
+162,162,Nguyễn Van Anh,Xuân Thư,0
+163,163,Lâm Linh,Genz sống sướng như v hở ra là kêu stress trầm cảm,0
+164,164,Nguyenhuy Lạc,"- Con cái bị bạo hành gia đình từ nhỏ sinh ra tính khí nóng nãy  bất ổn tâm lý về sau ( mình cũng là một nạn nhận khi gánh chịu căn bệnh rối loạn tiền đình ở tuổi 19, vì từ nhỏ đã bị chính người thân tác động vật lý vào đầu trong thời gian dài ) nhưng … Xem thêm",0
+165,165,Khanh Ha,#tatcalataigenZ,0
+166,166,Kan Kan Khùm,"Gen nào cũm dị nhe, có nhiều đứa rất dễ thương và ngoan, nhưng có những đứa nết thực sự rất kìiii",0
+167,167,Lý Uyên Nhi,Chấn Hưng,0
+168,168,Linh Đâyy,Nguyễn Thư,0
+169,169,Thuc Anh,genZ sao làm lại tụi gen alpha =)))))),0
+170,170,Minh Tuấn,"Mới 2k2,3,4 mà làm gì mỗi tháng mấy chục triệu, mới tí tuổi mà làm chủ gì???",0
+171,171,Nguyễn Tuấn,Bản thân thì lương 4 5tr mà đòi quen mấy anh lương 50tr trở lên :)))),1
+172,172,Nguyễn Yến,"“giờ tui no toàn bấm dt cha mẹ lo chứ biết lm gi “ dm đi lm cực hơn con chó nữa, ko than kể khổ mà hễ chán nghỉ 1 ngày la i như rằng phế :)))",0
+173,173,Litte Mưn,Pham Anh Minh Anhh Phạm Văn Tất Thắng cta dồ ái mồ ,0
+174,174,Kim Thùy,Tường Vy đọc cmt,0
+175,175,Kiet Tran,Kiều Trang,0
+176,176,Nguyễn Thùy,"Trần Nguyễn Asnh Minh đu theo trào lưu, xu hướng các kiểu mỗi tháng 1 một cái, mà chả thấy cái nào ra hồn, toàn rảnh rỗi sinh nông nổi",0
+177,177,Nguyen Phuong,"""genz không có biết mấy trò tuổi thơ , không có trải qua khó khăn..."" nín liền , ba cái trò chơi món ăn đồ này kia tụi tui cũng chơi đâu có thiếu trò nào đâu , genz sinh ra trong thời kì công nghệ phát triển không có nghĩa là genz ăn ngủ với điện thoại , không có biết khó khăn là gì đâu mấy mẹ , bộ tưởng hay hả:P",0
